@@ -15,13 +15,22 @@ export default {
             description: 'What is the name of the topping',
         },
          {
-            name: 'veggetarian',
-            title: 'Veggetarian',
+            name: 'vegetarian',
+            title: 'Vegetarian',
             type: 'boolean',
-            description: 'What is the name of the topping',
+            description: 'What is the name of the topping?',
             options: {
                 layout: 'checkout',
             }
         },       
-    ]
+    ],
+    preview: {
+        select: {
+            name: 'name',
+            vegetarian: 'vegetarian'
+        },
+        prepare: ({name, vegetarian})=> ({
+            title: `${name} ${vegetarian ? '🌱' : ''}`,
+        })
+    }
 }
