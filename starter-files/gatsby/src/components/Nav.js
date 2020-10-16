@@ -71,6 +71,10 @@ export default function Nav() {
 					</Link>
 				</li>
 				<li>
+					<Link to="/pizzas">Pizzas</Link>
+				</li>
+	
+				<li>
 					<Link to="/beers">Beers</Link>
 				</li>
 	
